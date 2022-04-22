@@ -1,0 +1,18 @@
+{
+    "name": "cfsm/app-salon",
+    "description": "proyecto app salon",
+    "type": "project",
+    "autoload":{
+        "psr-4": {
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Model\\" : "./models"
+        }
+    },
+    "authors": [
+        {
+            "name": "cf"
+        }
+    ],
+    "require": {}
+}
