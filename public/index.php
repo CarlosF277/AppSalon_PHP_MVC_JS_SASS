@@ -13,7 +13,7 @@ $router->post("/",[LoginController::class, "logout"]);
 
 //Cerrar sesion
 $router->get("/logout",[LoginController::class, "logout"]);
-debuguear([LoginController::class, "logout"]);
+//debuguear([LoginController::class, "logout"]);
 
 //Recuperar password
 $router->get("/olvide",[LoginController::class, "olvide"]);
