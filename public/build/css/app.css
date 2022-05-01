@@ -497,3 +497,20 @@ p {
   margin-bottom: 2.5rem;
   text-align: center;
 }
+
+.alerta {
+  padding: 1.25rem;
+  color: #FFFFFF;
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.alerta.error {
+  background-color: #cb0000;
+}
+.alerta.exito {
+  background-color: #329f00;
+}
