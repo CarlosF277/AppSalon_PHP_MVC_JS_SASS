@@ -435,6 +435,27 @@ p {
   padding: 3rem 0;
 }
 
+.seccion {
+  padding: 5rem 0;
+  display: none;
+  /*
+  &:nth-child(3),
+  &:nth-child(4){
+
+  } //para ocultar esas secciones para poder crear una navegacion yna paginacion*/
+}
+.seccion .text-center {
+  text-align: center;
+}
+
+.mostrar {
+  display: block;
+}
+
+.ocultar {
+  display: none;
+}
+
 .formulario {
   width: 100%;
   margin-top: 5rem;
@@ -453,6 +474,11 @@ p {
   border: none;
   padding: 1.25rem;
   border-radius: 10px;
+}
+.campo input:disabled {
+  background-color: #6d7158;
+  color: #FFFFFF;
+  cursor: not-allowed;
 }
 
 .boton {
@@ -513,4 +539,43 @@ p {
 }
 .alerta.exito {
   background-color: #329f00;
+}
+
+@media (min-width: 768px) {
+  .tabs {
+    display: flex;
+  }
+}
+.tabs button {
+  background-color: #0da6f3;
+  border: none;
+  color: #FFFFFF;
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: background-color 300ms ease;
+}
+.tabs button:hover {
+  cursor: pointer;
+  background-color: #0a85c3;
+}
+.tabs button.actual {
+  background-color: #FFFFFF;
+  color: #0da6f3;
+}
+
+.paginacion {
+  padding: 5rem 0;
+}
+@media (min-width: 480px) {
+  .paginacion {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.paginacion button {
+  margin: 0 0 1rem 0;
 }

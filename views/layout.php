@@ -16,6 +16,10 @@
                 <?php echo $contenido; ?>
         </div>
     </div>
+
+    <?php
+        echo $script ?? ""; //permite agregar el archivo de js donde se requiera
+    ?>
     
             
 </body>

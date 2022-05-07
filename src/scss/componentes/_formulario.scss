@@ -21,6 +21,12 @@
         border: none;
         padding: calc(v.$separacion / 4);
         border-radius: 10px;
+
+        &:disabled{
+            background-color: lighten(v.$negro, 30%);
+            color: v.$blanco;
+            cursor: not-allowed;
+        }
     }
 }
 
