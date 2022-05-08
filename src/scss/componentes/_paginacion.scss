@@ -13,3 +13,8 @@
         margin: 0 0 1rem 0;
     }
 }
+
+.ocultar{
+    //display: none;
+    visibility: hidden; //para que no quite el lugar del elemento que no va a aparecer
+}
