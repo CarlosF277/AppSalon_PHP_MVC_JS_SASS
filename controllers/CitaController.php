@@ -7,7 +7,7 @@ use MVC\Router;
 class CitaController{
     public static function index(Router $router){
 
-        debuguear($_SESSION);
+        session_start();
 
         $router->render("cita/index",[
             "nombre" => $_SESSION["nombre"]
