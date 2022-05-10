@@ -2,6 +2,13 @@ let paso = 1; //paso inicial para el paginador en todo el codigo
 const pasoInicial = 1;
 const pasoFinal = 3;
 
+const cita = {
+    nombre: "",
+    fecha: "",
+    hora: "",
+    servicios: ""
+};
+
 
 document.addEventListener("DOMContentLoaded", function(){
     iniciarApp();
@@ -144,7 +151,11 @@ function mostrarServicios(servicios){
 
         const servicioDiv = document.createElement("DIV");
         servicioDiv.classList.add("servicio");
-        servicioDiv.dataset.idServicio = id;
+        servicioDiv.dataset.idServicio = id; //agrega la etiqeuta de data, data-id-servicio="id"
+
+        servicioDiv.onclick = function () {
+            seleccionarServicio(servicio);
+        };
 
         servicioDiv.appendChild(nombreServicio);
         servicioDiv.appendChild(precioServicio);
@@ -152,5 +163,15 @@ function mostrarServicios(servicios){
         //inyectar el codigo en servicios
         document.querySelector("#servicios").appendChild(servicioDiv);
     })
+}
+
+function seleccionarServicio (servicio){
+    const {id} = servicio;
+    const {servicios} = cita;
+    cita.servicios = [...servicios, servicio];
+
+    const divServicio = document.querySelector(`[data-id-servicio="${id}"]`);
+    divServicio.classList.add("seleccionado");
+    console.log(cita);
 }
 

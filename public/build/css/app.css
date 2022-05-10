@@ -475,6 +475,12 @@ p {
   transition-duration: 300ms;
   text-align: center;
 }
+.listado-servicios .servicio.seleccionado {
+  background-color: #0da6f3;
+}
+.listado-servicios .servicio.seleccionado p {
+  color: #FFFFFF;
+}
 .listado-servicios .servicio:hover {
   transform: scale(1.1);
 }
