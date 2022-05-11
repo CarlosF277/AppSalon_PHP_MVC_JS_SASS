@@ -29,11 +29,11 @@
 
             <div class="campo">
                 <label for="fecha">Fecha</label>
-                <input id="fecha" type="date">
+                <input id="fecha" type="date" min="<?php echo date("Y-m-d");//,strtotime("+1 day") para incrementar en un dia ?>">
             </div>
 
             <div class="campo">
-                <label for="hora">Fecha</label>
+                <label for="hora">Hora</label>
                 <input id="hora" type="time">
             </div>
 
@@ -43,7 +43,7 @@
     </div>
 
 
-    <div id="paso-3" class="seccion">
+    <div id="paso-3" class="seccion contenido-resumen">
         <h2>Resumen</h2>
         <p class="text-center">Verifica que la informacion sea correcta</p>
     </div>
