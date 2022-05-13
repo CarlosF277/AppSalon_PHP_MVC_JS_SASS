@@ -3,4 +3,9 @@
 
 .boton {
     @include m.boton(v.$azul, v.$blanco);
+
+    &.disable{
+        pointer-events: none;
+        @include m.boton(v.$gris, v.$blanco);
+    }
 }

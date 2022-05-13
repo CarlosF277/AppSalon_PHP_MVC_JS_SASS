@@ -495,6 +495,23 @@ p {
   margin: 0;
 }
 
+.contenido-resumen p {
+  margin-bottom: 1rem;
+}
+.contenido-resumen span {
+  color: #0da6f3;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.contenedor-servicio {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 3rem 0;
+}
+.contenedor-servicio:last-of-type {
+  margin-bottom: 5rem;
+}
+
 .formulario {
   width: 100%;
   margin-top: 5rem;
@@ -544,6 +561,33 @@ p {
 }
 .boton:hover {
   background-color: #0a85c3;
+  cursor: pointer;
+}
+.boton.disable {
+  pointer-events: none;
+  background-color: #e1e1e1;
+  padding: 1.5rem 4rem;
+  color: #FFFFFF;
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
+  display: inline-block;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 5rem 0;
+}
+@media (min-width: 768px) {
+  .boton.disable {
+    width: auto;
+  }
+}
+.boton.disable:hover {
+  background-color: #c8c8c8;
   cursor: pointer;
 }
 
