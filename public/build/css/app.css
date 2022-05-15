@@ -550,6 +550,26 @@ p {
   margin-bottom: 5rem;
 }
 
+.citas {
+  list-style: none;
+  padding: 0;
+}
+.citas li {
+  padding: 1rem;
+  border-top: 1px solid #FFFFFF;
+}
+.citas li p {
+  font-weight: 700;
+  color: #0da6f3;
+}
+.citas li span, .citas li .servicio {
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.citas li:hover {
+  background-color: #022131;
+}
+
 .formulario {
   width: 100%;
   margin-top: 5rem;
