@@ -33,7 +33,4 @@ function isAdmin() : void{
     if(!isset($_SESSION["admin"])){
         header("Location: /");
     }
-
-    debuguear($_SESSION);
-
 }

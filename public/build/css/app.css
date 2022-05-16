@@ -480,6 +480,19 @@ p {
   cursor: pointer;
 }
 
+.barra-servicios {
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .barra-servicios {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.barra-servicios .boton {
+  margin: 0 0 1rem 0;
+}
+
 .seccion {
   padding: 5rem 0;
   display: none;
