@@ -9,6 +9,22 @@ class AdminController {
     public static function index(Router $router){
         session_start();
 
+        isAdmin();
+        
+        //obteniendo la fecha seleccionada con GET
+        $fecha = $_GET["fecha"] ?? date("Y-m-d");
+
+        //separando fecha para verificarla
+        $fechas =explode("-",$fecha); //para no pasar el explode a la vista
+
+        //verificando fecha con checkdate
+        if(!checkdate($fechas[1], $fechas[2], $fechas[0])){
+            header("Location: /404");
+        }
+
+        //debuguear($fecha);
+        //$fecha = date("Y-m-d");
+
         //Consultar la base de datos
         $consulta = "SELECT citas.id, citas.hora, CONCAT( usuarios.nombre, ' ', usuarios.apellido) as cliente, ";
         $consulta .= " usuarios.email, usuarios.telefono, servicios.nombre as servicio, servicios.precio  ";
@@ -19,7 +35,7 @@ class AdminController {
         $consulta .= " ON citasservicios.citaId=citas.id ";
         $consulta .= " LEFT OUTER JOIN servicios ";
         $consulta .= " ON servicios.id=citasservicios.servicioId ";
-        //$consulta .= " WHERE fecha =  '${fecha}' ";
+        $consulta .= " WHERE fecha =  '${fecha}' ";
 
         $citas = AdminCita::SQL($consulta);
 
@@ -27,7 +43,8 @@ class AdminController {
 
         $router->render("admin/index", [
             "nombre" => $_SESSION["nombre"],
-            "citas" => $citas
+            "citas" => $citas,
+            "fecha" => $fecha
         ]);
     }
 }

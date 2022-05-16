@@ -9,6 +9,7 @@ use Model\Servicio;
 class APIController{
     public static function index(){
         
+        
         $servicios = Servicio::all();
 
         //convertir a JSON
@@ -56,5 +57,19 @@ class APIController{
         echo json_encode($respuesta);
     }
 
-    
+    public static function eliminar(){
+        
+        if($_SERVER["REQUEST_METHOD"] === "POST"){
+            $id = $_POST["id"];
+
+            $cita = Cita::find($id);
+            //debuguear($cita);
+            $cita->eliminar();
+
+            //regresando a la pagina anterior
+            header("Location:" . $_SERVER["HTTP_REFERER"]);
+        }
+    }
+
+
 }
